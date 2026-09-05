@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/postcss';
 // GitHub Pages needs only the client game, with no SSR or RSC server.
 // Relative assets support /game9/ and custom domains with the same artifact.
 export default defineConfig({
-  root: fileURLToPath(new URL('./pages', import.meta.url)),
+  root: fileURLToPath(new URL('./static-entry', import.meta.url)),
   base: './',
   publicDir: fileURLToPath(new URL('./public', import.meta.url)),
   plugins: [react()],
