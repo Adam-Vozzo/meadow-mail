@@ -8,14 +8,14 @@ A small third-person Three.js prototype about delivering mail, making paths, and
 
 The complete game is on `main`. To enable its public GitHub site:
 
-1. Open [Settings → Pages](https://github.com/Adam-Vozzo/game9/settings/pages).
+1. Open [Settings → Pages](https://github.com/Adam-Vozzo/meadow-mail/settings/pages).
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Open [Deploy Meadow Mail to GitHub Pages](https://github.com/Adam-Vozzo/game9/actions/workflows/pages.yml), choose **Run workflow**, and run it on **main**. If a run failed before Pages was enabled, rerun it after step 2.
-4. Once deployment succeeds, play at **https://adam-vozzo.github.io/game9/**.
+3. Open [Deploy Meadow Mail to GitHub Pages](https://github.com/Adam-Vozzo/meadow-mail/actions/workflows/pages.yml), choose **Run workflow**, and run it on **main**. If a run failed before Pages was enabled, rerun it after step 2.
+4. Once deployment succeeds, play at **https://adam-vozzo.github.io/meadow-mail/**.
 
 Future pushes to `main` rebuild and publish the game automatically. No API keys or backend are needed. Use the Actions source above; publishing the raw source branch would show the README instead of the compiled game.
 
-The Pages build shares the exact game component and engine with the Sites build. It bundles a client-only entry, uses relative asset URLs for `/game9/` or a custom domain, and validates the output before uploading `dist/pages`. To build and preview that artifact locally:
+The Pages build shares the exact game component and engine with the Sites build. It bundles a client-only entry, uses relative asset URLs for `/meadow-mail/` or a custom domain, and validates the output before uploading `dist/pages`. To build and preview that artifact locally:
 
 ```sh
 npm run build:pages
@@ -75,6 +75,6 @@ npm run typecheck
 npm run build
 ```
 
-Tests cover the five-delivery round, upgrade economy, corrupt-save recovery, bridge and shortcut access, island route reachability and dock locations. The TypeScript check and static builds validate the complete application. The GitHub Pages artifact was also played in Chrome under `/game9/`: startup, asset loading, keyboard movement, parcel pickup and delivery, bridge purchase, journal, save/reload and mobile layout passed with no browser errors or failed requests. Desktop and mobile screenshots were inspected. A native WebMCP runtime contract check remains unverified; WebMCP is optional and does not affect normal play.
+Tests cover the five-delivery round, upgrade economy, corrupt-save recovery, bridge and shortcut access, island route reachability and dock locations. The TypeScript check and static builds validate the complete application. The GitHub Pages artifact was also played in Chrome under `/meadow-mail/`: startup, asset loading, keyboard movement, parcel pickup and delivery, bridge purchase, journal, save/reload and mobile layout passed with no browser errors or failed requests. Desktop and mobile screenshots were inspected. A native WebMCP runtime contract check remains unverified; WebMCP is optional and does not affect normal play.
 
 Deployment uses the static output directory recorded in `.openai/hosting.json`. The repository includes a CI workflow for tests, type checking and build. Starter dependencies are retained; audit the dependency tree before adapting this into a production service.
